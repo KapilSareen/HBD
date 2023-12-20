@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Poppins:wght@300&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Playpen+Sans&display=swap');
+*{
+    margin: 0;padding: 0;
+}
+.content{
+    
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    
+}
+.box{
+    background-color: rgba(21, 21, 21, 0.36);
+
+}
+:root{
+       --color1: rgb(176, 104, 168);
+       --color2: rgba(225, 76, 100, 0.8);
+    /* --color2: rgba(203, 87, 184, 0.5); */
+}
+.nav{
+    z-index: 100;
+    position: sticky;
+    border-bottom: 2px solid pink;
+    top: 0;
+    display: flex;
+    /* margin: 0px 2px; */
+    text-decoration:underline;
+    text-decoration-thickness: 1.5px;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    font-family: 'Sacramento', cursive;
+    color: rgb(255, 255, 255);
+    font-weight:500; ;
+    font-size: 62px;
+    background-image: linear-gradient(var(--color1),var(--color2));
+
+    border-end-end-radius: 9px;
+    border-end-start-radius:9px ;
+    height: 8rem;
+}
+
+#heart img{
+    /* position:absolute; */
+    left:0;
+    right:0;
+    margin:0 auto;
+   }
+  
+   @keyframes heartFadeInOut {
+    0% {transform: scale(1);}
+    25% {transform: scale(.97);}
+    35% {transform: scale(.9);}
+    45% {transform: scale(1.1);}
+    55% {transform: scale(.9);}
+    65% {transform: scale(1.1);}
+    75% {transform: scale(1.03);}
+    100% {transform: scale(1);}
+  }
+  
+  #heart img.bottom { 
+    animation-name: heartFadeInOut; 
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+.main{
+  gap: 27px;
+  max-width: 70vw;
+  margin: auto;
+  padding: 38px 0px 90px 0px;
+  display: flex;
+  flex-direction: column;
+}
+  .message{
+    position: relative;
+    height: 40vh;
+    width: 60vw;
+    padding-bottom: 40px;
+    /* margin: 25px 0px; */
+    background-color: rgba(0, 0, 0, 0.45);
+    border-left: 3px groove rgb(255, 255, 255);
+    border-right: 3px groove rgb(255, 255, 255);
+    border-radius: 17px;
+    margin: auto;
+    color: rgb(255 202 202);
+    text-shadow: -2px 2px black;
+    text-align: center;
+    font-size: 23px;
+
+
+}
+.message::first-line{
+  font-size: larger;
+
+}
+
+.message::first-letter{
+  font-size: 39px;
+}
+
+  .card {
+    box-shadow: inset;
+    border-radius: 10px;
+    width: 680px;
+    height: 450px;
+    /* position: absolute; */
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+  .card:hover {
+    transform: rotate(-5deg);
+}
+  .card:hover .outside {
+    transform: rotateY(-130deg);
+}
+  .outside,
+  .inside {
+    height: 100%;
+    position: absolute;
+    left: 50.1%;
+}
+.inside {
+    width: 50%;
+    background: linear-gradient(to right, #eb5959, #c9b6b6 70%);
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+}
+.outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    width: 55%;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+}
+.front,
+.back {
+      background: linear-gradient(to right, #eb5959, #c9b6b6 70%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+  .front {
+    background-image: url(bday_bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: 600;
+    border: 1.5px groove ;
+    border-radius: 4px;
+}
+  .back {
+    transform: rotateY(180deg);
+    /* background: linear-gradient(to left, #e7e7e7, #ffffff 30%); */
+ }
+  .cake {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    bottom: 30px;
+}
+
+  .cake>p{
+    padding-top: 10px;
+}
+  .outside p {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #000046;
+}
+  .inside h1 {
+    font-size: 120px;
+    line-height: 120px;
+}
+
+.card-slot{
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px; */
+}
+
+.cardmsg{
+  font-family: 'Handlee', cursive;
+  font-size: 55px;
+  color: rgb(255 224 224);
+  text-shadow: -3px 3px #000000;
+}
+.sep{
+    background-color: rgb(187, 185, 185);
+    height: 4px;
+    width: 80vw;
+    margin: auto;
+    border-radius:20px ;
+}
